@@ -50,6 +50,8 @@ jobs:
             
             echo "   Compilando $PASTA..."
 
+            echo "$(pwd)"
+
             if gcc -Wall -Wextra -Werror -std=c11 "$PASTA/*.c" -o "$PASTA/main" -lm 2>&1; then
               echo "   ✅ SUCESSO"
               SUCESSOS=$((SUCESSOS + 1))
